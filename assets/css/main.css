@@ -944,3 +944,6 @@ generating grid classes
     width: calc(100vw - 64px);
   }
 }
+.wrapper-header {
+  color: #aaaaaa;
+}

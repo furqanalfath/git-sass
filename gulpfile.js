@@ -5,7 +5,7 @@ var sass = require('gulp-sass')(require('sass'));
 //var postcss = require('gulp-postcss');
 var paths = {
     styles: {
-        src: 'sass/main.scss',
+        src: 'scss/main.scss',
         dest: 'assets/css'
     }
 }
