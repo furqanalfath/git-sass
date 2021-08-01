@@ -6,7 +6,7 @@ var sass = require('gulp-sass')(require('sass'));
 var paths = {
     styles: {
         src: 'sass/main.scss',
-        dest: 'css'
+        dest: 'assets/css'
     }
 }
 function scss() {
