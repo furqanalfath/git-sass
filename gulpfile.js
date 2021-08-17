@@ -1,8 +1,9 @@
 'use strict'
 
-var gulp = require('gulp');
-var sass = require('gulp-sass')(require('sass'));
-//var postcss = require('gulp-postcss');
+const { src, dest, watch, series, parallel} = require('gulp');
+
+const sass = require('gulp-sass')(require('sass'));
+
 var paths = {
     styles: {
         src: 'scss/main.scss',
@@ -10,9 +11,9 @@ var paths = {
     }
 }
 function scss() {
-    return gulp.src(paths.styles.src)
+    return src(paths.styles.src)
         .pipe(sass().on('error', sass.logError))
         .pipe(sass({ outputStyle: 'expanded' }))
-        .pipe(gulp.dest(paths.styles.dest));
+        .pipe(dest(paths.styles.dest));
 }
 exports.default = scss
