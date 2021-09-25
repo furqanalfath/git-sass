@@ -1,3 +1,15 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+}
+
+/*===== Colores =====*/
+:root {
+  --first-color: #4070F4;
+  --second-color: #0E2431;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -81,7 +93,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -944,6 +957,13 @@ generating grid classes
     width: calc(100vw - 64px);
   }
 }
-.wrapper-header {
-  color: #aaaaaa;
+/*===== Navigation =====*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.nav__list {
+  display: flex;
+}
+/*# sourceMappingURL=main.css.map */

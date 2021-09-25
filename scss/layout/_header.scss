@@ -1,3 +1,13 @@
-.wrapper-header{
-  color : $graybutton;
+/*===== Navigation =====*/
+.nav{
+ // height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //font-weight: var(--font-semi);
+
+  &__list{
+    display: flex;
+  }
 }
+

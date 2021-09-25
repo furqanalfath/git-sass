@@ -13,7 +13,7 @@ function scssTask() {
 	return (
 		src('scss/main.scss', { sourcemaps: true })
 			.pipe(sass())
-			.pipe(postcss([autoprefixer(), cssnano()]))
+			.pipe(postcss([autoprefixer()]))
 			.pipe(dest('dist/css', { sourcemaps: '.' }))
 	);
 }
@@ -50,10 +50,12 @@ function browserSyncReload(cb) {
 function watchTask() {
 	watch('dist/index.html', browserSyncReload);
 	watch(
-		['app/scss/**/*.scss', 'app/**/*.js'],
-		series(scssTask, jsTask) , browserSyncReload
+		['scss/**/*.scss', 'js/**/*.js'],
+		series(scssTask, jsTask, browserSyncReload)
 	);
 }
 
-// Default Gulp Task
+/* Default Gulp Task
+ * Gulp Start this task (function) at start
+ */
 exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
