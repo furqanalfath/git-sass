@@ -2,10 +2,10 @@
 
 
     .
-    ├── dist                   # Compiled files (alternatively `dist`)
-    ├── js                    # Documentation files (alternatively `doc`)
-    ├── scss                     # Source files (alternatively `lib` or `app`)
-    ├── gulpfile.js                    # Automated tests (alternatively `spec` or `tests`)
+    ├── dist                   # Main File (contain css and js directory)
+    ├── js                     # Source file of js
+    ├── scss                   # Source file of css
+    ├── gulpfile.js            # Gulp automated js and css
     └── README.md
     
 
