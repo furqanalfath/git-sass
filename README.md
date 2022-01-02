@@ -16,6 +16,6 @@
 
 Run Gulp
 
-1. git remote add origin https://github.com/furqanalfath/.git
-2. git branch -M main
+1. git remote add --all
+2. git commit -m "Your Comment"
 3. git push -u origin main
