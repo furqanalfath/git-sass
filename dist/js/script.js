@@ -1,2 +1,2 @@
-"use strict";console.log("Load script.js");var app={};
+"use strict";var showMenu=function(n,e){var t=document.getElementById(n),c=document.getElementById(e);t&&c&&t.addEventListener("click",(function(){c.classList.toggle("show")}))};showMenu("nav-toggle","nav-menu");var navLink=document.querySelectorAll(".nav__link");function linkAction(){document.getElementById("nav-menu").classList.remove("show")}navLink.forEach((function(n){return n.addEventListener("click",linkAction)}));
 //# sourceMappingURL=script.js.map

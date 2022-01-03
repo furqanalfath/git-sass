@@ -6,8 +6,69 @@
   align-items: center;
   //font-weight: var(--font-semi);
 
-  &__list{
-    display: flex;
+  &__menu{
+    @media screen and (max-width: 767px){
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 80%;
+        height: 100%;
+        padding: 2rem;
+        background-color: var(--second-color);
+        transition: .5s;
+    }
   }
+  &__item{
+    margin-bottom: var(--mb-4);
+}
+&__link{
+    position: relative;
+    color: #fff;
+
+    &:hover{
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 0.18rem;
+            left: 0;
+            top: 2rem;
+            background-color: var(--first-color);
+        }
+    }
+}
+&__logo{
+    color: var(--second-color);
+}
+&__toggle{
+    color: var(--second-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 }
 
+.show{
+  right: 0;
+}
+
+@media screen and(min-width: 768px){
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+    &__list{
+        display: flex;
+        padding-top: 0;
+    }
+    &__item{
+        margin-left: var(--mb-6);
+        margin-bottom: 0;
+    }
+    &__toggle{
+        display: none;
+    }
+    &__link{
+        color: var(--second-color);
+    }
+}
+}
